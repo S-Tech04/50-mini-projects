@@ -1,0 +1,153 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar
+{
+   width: 10px;
+}
+::-webkit-scrollbar-thumb
+{
+   height: 80px;
+   background: #375666;
+   border: 8px solid transparent;
+   border-radius: 12px;
+}
+::-webkit-scrollbar-thumb:active
+{
+    background: #003349;
+}
+body
+{
+    font-family: sans-serif;
+    background: #002333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    min-height: 100vh;
+}
+li
+{
+    list-style: none;
+}
+.container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 2.5%;
+    overflow: hidden;
+}
+.container #main-Video
+{
+    border-radius: 5px 5px 0px 0;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+    outline: none;
+}
+
+
+.playlistBox
+{
+    height: 500px;
+    padding: 0 10px 0 10px;
+    overflow-y: scroll;
+}
+.playlistBox .row .AllLessons
+{
+   display: block;
+   text-align: left;
+   color: #dcdee1;
+   font-size: 15px;
+   font-weight: 700;
+   margin-left: 40px;
+   line-height: 40px;
+}
+.playlistBox ul li
+{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   list-style: none;
+   color: #dcdee1;
+   cursor: pointer;
+   border: 1px solid transparent;
+   padding: 15px 20px;
+   border-radius: 5px;
+}
+.playlistBox ul li:hover
+{
+    border: 0.5px solid #375666;
+}
+.playlistBox ul li .row span
+{
+    font-size: 15px;
+    font-weight: 400;
+    color: #dcdee1;
+    text-decoration: none;
+    display: inline-block;
+    text-align: left;
+}
+.playlistBox ul li .row span::before
+{
+    content: '\f01d';
+    font-family: FontAwesome;
+    color: #dcdee1;
+    margin-right: 15px;
+    font-size: 20px;
+}
+ul li.playing .row span::before
+{
+    content: '\f28c';
+    font-family: FontAwesome;
+    color: #fff;
+    margin-right: 15px;
+    font-size: 20px;
+}
+.playlistBox ul li.playing .row span
+{
+   color: #fff;
+}
+.playlistBox ul li span.duration
+{
+    font-size: 15px;
+    font-weight: 400;
+    display: inline-block;
+    color: #dcdee1;
+    text-align: right;
+}
+.playlistBox ul li.playing
+{
+   pointer-events: none;
+   background: #1d3541;
+   border: none;
+}
+.playlistBox ul li video
+{
+    display: none;
+}
+
+@media(max-width: 1092px){
+    .container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        padding: 30px 10px;
+        overflow: hidden;
+    }
+    .container #main-Video
+    {
+        height: 100%;
+    }
+    .playlistBox
+    {
+        height: 380px;
+        margin-top: 10px;
+    }
+}

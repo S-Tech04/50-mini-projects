@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Disable copy text on website</title>
+</head>
+<body>
+  <div class="copy-overlay"></div>
+  <div class="protect_alert">
+    <span>Don't copy text!</span>
+  </div>
+  <section>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus delectus corrupti tenetur laboriosam doloremque nam iure optio voluptates nulla obcaecati hic quod nobis, alias illum maiores perferendis, recusandae libero sunt. Nostrum in earum magni incidunt doloremque magnam voluptatibus, fugit, quia et ipsa doloribus. Repudiandae, itaque similique soluta vero numquam vitae animi quam nihil ullam dolorem non libero quas. Enim debitis dicta, ipsum nobis dolores autem eos corrupti, cupiditate neque veniam culpa laudantium sit eveniet ad sint inventore voluptatem omnis quos nesciunt nisi, ipsa ab doloremque. Quaerat corrupti distinctio laudantium vero quas rerum cum dolores aperiam accusantium doloribus aliquam fugit magni quasi amet accusamus, dignissimos dolorem illo unde esse dolor explicabo ducimus. Eveniet veniam enim expedita a earum, quidem blanditiis ullam autem, saepe quae ipsa neque consequuntur tenetur, hic doloremque debitis harum iusto odit cumque. Officia, aliquam. Reiciendis dolore, est nisi veritatis officia, maiores exercitationem maxime eligendi illum asperiores a! Similique doloribus architecto nulla libero perferendis aliquid saepe ex quibusdam perspiciatis assumenda, rerum, at quae, iusto laborum ipsa. Cumque commodi nostrum quidem reiciendis recusandae architecto autem in voluptatem? Ullam perspiciatis quos dolorem, pariatur quia a ducimus earum modi non esse nisi nostrum alias odit repellat. Earum enim voluptas, quidem mollitia, beatae nulla dolores ullam blanditiis non tenetur quae voluptatem quis, at quia officiis iste sit neque quaerat. Molestias ipsa unde perspiciatis asperiores quaerat. Veritatis voluptatibus aspernatur consequuntur quisquam odio placeat perferendis amet cupiditate, labore, nemo eaque? Nesciunt facere blanditiis, at beatae reiciendis obcaecati? Molestiae velit incidunt, iste obcaecati asperiores repudiandae. Et cum eius labore ducimus non accusamus commodi, quibusdam eos quod omnis accusantium ex aperiam inventore neque iste earum impedit, molestiae ipsa deserunt hic iure libero dolores cumque. Accusamus, sapiente. Ab beatae obcaecati ducimus perspiciatis illo nesciunt sunt ea accusamus nisi eos ipsum molestias hic repellendus, quam veritatis, quia quaerat nihil incidunt praesentium ratione enim quibusdam vitae assumenda! Temporibus, inventore sunt vero rerum, sint, aliquid debitis incidunt veritatis odio facilis et voluptate ex ut asperiores alias tempore quam consequuntur sed. Explicabo nobis ab, ipsa beatae labore reprehenderit neque iste laboriosam est obcaecati aliquam atque rerum sunt tempore delectus cupiditate hic cum quam. Molestiae laboriosam exercitationem cum hic dolores! Culpa dolorem corrupti sed. Ipsam laboriosam error beatae accusamus quis pariatur temporibus voluptatem saepe, quisquam sapiente ad veniam aliquam repellendus laborum nam alias rerum cum accusantium veritatis? Sed aut magni itaque inventore esse suscipit architecto quisquam error debitis quod dicta, modi, repellat cum aperiam, eveniet eius alias natus quidem ratione necessitatibus. Excepturi in libero voluptate consequatur nihil quia nulla, recusandae maxime dolore illum minus! Consectetur sit ipsum voluptatibus exercitationem. Ipsam, pariatur aspernatur mollitia consequuntur quibusdam libero sequi animi qui dolores. Natus nisi mollitia nesciunt quos fugiat facere nam! Magni sed, sit et perferendis quidem, sint fugit rem omnis velit harum ab quaerat. Numquam accusamus earum recusandae harum commodi! Doloribus reiciendis maiores veritatis sint modi libero. Adipisci aut sed minus molestias cumque at, quae, quia est consequuntur, omnis voluptatem? Nam eveniet doloribus neque. Eveniet autem eligendi veniam a officiis ipsam aliquam voluptates inventore mollitia!</p>
+  </section>
+
+  <script>
+    const copyOverlay = document.querySelector('.copy-overlay')
+    const protectAlert = document.querySelector('.protect_alert')
+
+    window.addEventListener('copy',(e)=>{
+      e.preventDefault();
+      copyOverlay.style.display = "block";
+      protectAlert.style.display = "block";
+    })
+    copyOverlay.addEventListener('click',()=>{
+      copyOverlay.style.display = "none";
+      protectAlert.style.display = "none";
+    })
+  </script>
+</body>
+</html>

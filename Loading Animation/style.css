@@ -1,0 +1,50 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgb(57, 159, 255);
+}
+.loader{
+    height: 75px;
+    width: 125px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.loader span{
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #fff;
+    margin: auto;
+}
+.loader .ball{
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border-radius: 50%;
+    animation: animate 0.5s alternate infinite;
+}
+.ball:nth-child(2){
+    animation-delay: 0.16s;
+}
+/* .ball:nth-child(3){
+    animation-delay: 0.32s;
+} */
+
+
+@keyframes animate{
+    0%{
+        transform: scaleX(1.25);
+    }
+    100%{
+        transform: translateY(-50px) scaleX(1);
+    }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="style.css">
+   <title>Document</title>
+</head>
+<body>
+   <div class="container">
+        <header>Sign Up</header>
+        <form action="#" onsubmit="return confirm();" method="POST">
+            <div class="error_text"></div>
+            <div class="field">
+               <input type="text" placeholder="Username">
+            </div>
+            <div class="field">
+               <input type="email" placeholder="Enter your Email">
+            </div>
+            <div class="field">
+               <input onkeyup="active()" type="password" id="pswrd_1" placeholder="Enter Password">
+            </div>
+            <div class="field">
+               <input type="password" onkeyup="active_2()" id="pswrd_2" disabled placeholder="Confirm Password">
+               <div class="showBtn">Show</div>
+            </div>
+            <input type="submit" value="Sign Up" class="btn" disabled>
+        </form>
+   </div>
+
+   <script>
+        const pswrd_1 = document.querySelector('#pswrd_1');
+        const pswrd_2 = document.querySelector('#pswrd_2');
+        const error_Text = document.querySelector('.error_text');
+        const btn = document.querySelector('.btn');
+        const showBtn = document.querySelector('.showBtn');
+
+        function active(){
+            if(pswrd_1.value.length >= 6){
+                btn.removeAttribute("disabled","");
+                btn.classList.add("active");
+                pswrd_2.removeAttribute("disabled","");
+            }else{
+                btn.setAttribute("disabled","");
+                btn.classList.remove("active");
+                pswrd_2.setAttribute("disabled","");
+            }
+        }
+
+        function active_2(){
+            if(pswrd_2.value != ""){
+                showBtn.style.display = "block";
+                showBtn.addEventListener('click', function(){
+                    if((pswrd_1.type == "password") && (pswrd_2.type == "password")){
+                       pswrd_1.type = "text";
+                       pswrd_2.type = "text";
+                       this.textContent = "Hide";
+                       this.classList.add("active");
+                    }else{
+                       pswrd_1.type = "password";
+                       pswrd_2.type = "password";
+                       this.textContent = "Show";
+                       this.classList.remove("active");
+                    }
+                })
+            }else{
+                showBtn.style.display = "none";
+            }
+        }
+
+        
+        function confirm(){
+            if(pswrd_1.value != pswrd_2.value){
+                error_Text.style.display = "block";
+                error_Text.textContent = "Error! Confirm Password Not Match";
+                error_Text.classList.remove("matched");
+                return false;
+            }else{
+                error_Text.style.display = "block";
+                error_Text.textContent = "Nice! Confirm Password Matched";
+                error_Text.classList.add("matched");
+                return false;
+           }
+        }
+   </script>
+</body>
+</html>

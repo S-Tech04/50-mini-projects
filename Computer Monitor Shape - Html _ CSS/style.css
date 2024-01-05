@@ -1,0 +1,67 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    font-family: 'Open Sans', 'Lato', 'sans-serif';
+    background: #333;
+}
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100%;
+}
+.monitor {
+    width: 660px;
+    height: 550px;
+    position: relative;
+    flex-shrink: 0;
+    margin: 20px;
+}
+.monitor .monitorImage{
+    width: 100%;
+}
+
+.video {
+    top: 5.7%;
+    left: 4.9%;
+    width: 90.8%;
+    border: 0;
+    height: 62%;
+    z-index: 1;
+    position: absolute;
+}
+
+.svg {
+    top: -12px;
+    right: -2px;
+    width: 204px;
+    z-index: 1;
+    position: absolute;
+}
+
+
+/* .video{
+   top: 5%;
+   left: 8%;
+   width: 83%;
+   border: 0;
+   height: 56%;
+   z-index: 1;
+   position: absolute;
+} */
+
+/* .svg{
+   top: -4px;
+   right: 28px;
+   width: 239px;
+   z-index: 1;
+   position: absolute;
+} */

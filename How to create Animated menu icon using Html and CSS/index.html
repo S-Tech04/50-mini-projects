@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Animated menu icon</title>
+</head>
+<body>
+    <div class="menu-icon">
+        <div class="line-1 no-animation"></div>
+        <div class="line-2 no-animation"></div>
+        <div class="line-3 no-animation"></div>
+    </div>
+    <script>
+        const menu = document.querySelector('.menu-icon')
+        const line_1 = document.querySelector('.line-1')
+        const line_2 = document.querySelector('.line-2')
+        const line_3 = document.querySelector('.line-3')
+        menu.addEventListener('click', ()=>{
+            menu.classList.toggle('active');
+            line_1.classList.remove('no-animation');
+            line_2.classList.remove('no-animation');
+            line_3.classList.remove('no-animation');
+        })
+    </script>
+</body>
+</html>
+         

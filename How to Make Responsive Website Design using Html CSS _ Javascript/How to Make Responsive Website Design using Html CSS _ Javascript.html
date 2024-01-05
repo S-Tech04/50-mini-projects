@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
+   <title>Responsive Website Design Using Htlm and CSS</title>
+
+   <!-- Created by S-Tech04 -->
+
+</head>
+<body>
+   <section>
+      <header>
+         <a href="#" class="logo"><img src="./images/logo1.png"></a>
+         <div class="toggle"></div>
+         <ul class="navigation">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Hire me</a></li>
+         </ul>
+      </header>
+      <div class="content">
+         <div class="text-content">
+            <h1>I'm <span>Saif </span>Laghari</h1>
+            <p>This is my official portfolio website to showcase my all work related to <br> web development and UI design</p>
+            <a href="#" class="btn">Download CV</a>
+            <div class="sci">
+               <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+               <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+               <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </div>
+         </div>
+         <div class="imgBx">
+            <img src="./images/pattern.png" class="back-img" alt="">
+            <img src="./images/img.png" class="front-img" alt="">
+         </div>
+      </div>
+   </section>
+
+   <script>
+      const toggleMenu = document.querySelector('.toggle');
+      const navigation = document.querySelector('.navigation');
+      toggleMenu.addEventListener('click', ()=>{
+         toggleMenu.classList.toggle('active');
+         navigation.classList.toggle('active');
+      })
+   </script>
+</body>
+</html>

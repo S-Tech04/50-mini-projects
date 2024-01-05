@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <title>Copy to Clipboard</title>
+
+   <!-- Created by S-Tech04 -->
+
+</head>
+<body>
+   <div class="text-boxes">
+      <div class="text-box htmlBox">
+         <div class="topic">HTML Code</div>
+         <textarea readonly id="HtmlCode"><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6f17055eb8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Button</title>
+</head>
+<body>
+    <button  class="btn">
+        <span class="txt">Botton</span>
+        <span class="round"><i class="fa fa-chevron-right"></i></span>
+    </button>
+</body>
+</html>
+         </textarea>
+         <button id="HtmlBtn">Copy Code</button>
+      </div>
+      <div class="text-box htmlBox">
+         <div class="topic">CSS Code</div>
+         <textarea readonly id="CSSCode">*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+button
+{
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 53px 12px 23px;
+    color: #fff;
+    background-color: #f3c40f;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+button span
+{
+    position: relative;
+    z-index: 3;
+}
+button .round
+{
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    background-color: #f8d23b;
+    transition: all 0.3s ease-out;
+    z-index: 2;
+}
+button .round i
+{
+    position: absolute;
+    top: 50%;
+    margin-top: -6px;
+    left: 50%;
+    margin-left: -4px;
+    transition: all 0.3s;
+}
+.txt
+{
+    font-size: 14px;
+    line-height: 1.45;
+}
+button:hover
+{
+    padding-left: 48px;
+    padding-right: 28px;
+}
+button:hover .round
+{
+    width: calc(100% - 6px);
+    border-radius: 30px;
+}
+button:hover .round i
+{
+    left: 12%;
+}
+         </textarea>
+         <button id="CSSBtn">Copy Code</button>
+      </div>
+   </div>
+   <script>
+      const HtmlBtn = document.getElementById('HtmlBtn');
+      const HtmlCode = document.getElementById('HtmlCode');
+      HtmlBtn.addEventListener('click',()=>{
+         HtmlCode.select();
+         document.execCommand('copy');
+         HtmlBtn.innerHTML = "Code Copied"
+      });
+      const CSSBtn = document.getElementById('CSSBtn');
+      const CSSCode = document.getElementById('CSSCode');
+      CSSBtn.addEventListener('click',()=>{
+         CSSCode.select();
+         document.execCommand('copy');
+         CSSBtn.innerHTML = "Code Copied"
+      })
+   </script>
+</body>
+</html>

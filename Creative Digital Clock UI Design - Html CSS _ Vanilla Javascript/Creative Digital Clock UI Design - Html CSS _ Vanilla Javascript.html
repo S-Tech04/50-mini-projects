@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <title>Creative Digital Clock UI Design - Html CSS & Vanilla Javascript</title>
+
+   <!-- Created by S-Tech04 -->
+
+</head>
+<body>
+   <div class="container">
+      <h2 class="title">Clock</h2>
+      <div class="box">
+         <span></span>
+         <div class="clock">
+            <h3 id="hour">04</h3>
+            <h3 id="dot">:</h3>
+            <h3 id="mint">33</h3>
+         </div>
+      </div>
+      <div class="dots">
+         <span></span>
+         <span></span>
+         <span></span>
+      </div>
+   </div>
+
+
+   <script>
+
+      function clock(){
+         let hour = document.getElementById('hour');
+         let min = document.getElementById('mint');
+
+         h = new Date().getHours();
+         m = new Date().getMinutes();
+
+         // now i'll convert 24hour time to 12 hour
+
+         if(h > 12){
+            h = h - 12;
+         }
+
+         // Add 0 to  the begining of number if less then 10
+
+         h = (h < 10) ? "0" + h : h;
+         m = (m < 10) ? "0" + m: m;
+
+         hour.innerHTML = h;
+         min.innerHTML = m;
+      }
+
+      var Interval = setInterval(clock,0)
+   </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+*
+{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: sans-serif;
+}
+body
+{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   background: #1f242d;
+   height: 100vh;
+   width: 100%;
+}
+a
+{
+   position: relative;
+   display: inline-block;
+   padding: 10px 30px;
+   background: #262c37;
+   margin: 10px;
+   text-decoration: none;
+   text-transform: uppercase;
+   color: #2894ff;
+   letter-spacing: 2px;
+}
+a:hover
+{
+   background: #2894ff;
+   color: #1f242d;
+   transition: 0.5s;
+   transition-delay: 1s;
+}
+a span
+{
+   position: absolute;
+   display: block;
+   background: #2894ff;
+}
+a span:nth-child(1)
+{
+   top: 0;
+   left: 0;
+   width: 1px;
+   height: 100%;
+   transform: scaleY(0);
+   transform-origin: top;
+   transition: transform 0.25s;
+}
+a:hover span:nth-child(1)
+{
+   transform: scaleY(1);
+   transform-origin: bottom;
+   transition: transform 0.25s;
+}
+a span:nth-child(2)
+{
+   top: 0;
+   right: 0;
+   width: 100%;
+   height: 1px;
+   transform: scaleX(0);
+   transform-origin: right;
+   transition: transform 0.25s;
+   transition-delay: 0.25s;
+}
+a:hover span:nth-child(2)
+{
+   transform: scaleX(1);
+   transform-origin: left;
+   transition: transform 0.25s;
+   transition-delay: 0.25s;
+}
+a span:nth-child(3)
+{
+   top: 0;
+   right: 0;
+   width: 1px;
+   height: 100%;
+   transform: scaleY(0);
+   transform-origin: bottom;
+   transition: transform 0.25s;
+   transition-delay: 0.5s;
+}
+a:hover span:nth-child(3)
+{
+   transform: scaleY(1);
+   transform-origin: top;
+   transition: transform 0.25s;
+   transition-delay: 0.5s;
+}
+a span:nth-child(4)
+{
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 1px;
+   transform: scaleX(0);
+   transform-origin: left;
+   transition: transform 0.25s;
+   transition-delay: 0.75s;
+}
+a:hover span:nth-child(4)
+{
+   transform: scaleX(1);
+   transform-origin: right;
+   transition: transform 0.25s;
+   transition-delay: 0.75s;
+}

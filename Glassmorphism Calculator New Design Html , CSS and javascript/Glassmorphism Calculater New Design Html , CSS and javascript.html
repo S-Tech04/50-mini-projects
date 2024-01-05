@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <title>Glassmorphism Calculater New Design Html , CSS and javascript</title>
+
+   <!-- Created by S-Tech04 -->
+
+</head>
+<body>
+   <div class="main">
+      <form action="#" name="calc" class="calculator">
+         <input type="text" name="textview" class="value">
+         <span class="num clear" onclick="document.calc.textview.value = ''">C</span>
+         <span class="num" onclick="back()">⌫</span>
+         <span class="num" onclick="document.calc.textview.value += '/'">/</span>
+         <span class="num" onclick="document.calc.textview.value += '7'">7</span>
+         <span class="num" onclick="document.calc.textview.value += '8'">8</span>
+         <span class="num" onclick="document.calc.textview.value += '9'">9</span>
+         <span class="num" onclick="document.calc.textview.value += '*'">X</span>
+         <span class="num" onclick="document.calc.textview.value += '4'">4</span>
+         <span class="num" onclick="document.calc.textview.value += '5'">5</span>
+         <span class="num" onclick="document.calc.textview.value += '6'">6</span>
+         <span class="num" onclick="document.calc.textview.value += '-'">-</span>
+         <span class="num" onclick="document.calc.textview.value += '1'">1</span>
+         <span class="num" onclick="document.calc.textview.value += '2'">2</span>
+         <span class="num" onclick="document.calc.textview.value += '3'">3</span>
+         <span class="num" onclick="document.calc.textview.value += '+'">+</span>
+         <span class="num" onclick="document.calc.textview.value += '0'">0</span>
+         <span class="num" onclick="document.calc.textview.value += '00'">00</span>
+         <span class="num" onclick="document.calc.textview.value += '.'">.</span>
+         <span class="num" onclick="document.calc.textview.value = eval(document.calc.textview.value)">=</span>
+      </form>
+   </div>
+
+   <script>
+      function back(){
+         let exp = document.calc.textview.value;
+         document.calc.textview.value = exp.substring(0,exp.length-1)
+      }
+   </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(224, 224, 224);
+}
+.download-btn{
+  position: relative;
+  font-size: 1.3em;
+  font-weight: 400;
+  background: #4285f4;
+  color: #fff;
+  padding: 18px;
+  border-radius: 30px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 5px 25px rgba(1, 1, 1, 0.26);
+}
+.download-btn:hover{
+  background: #116cff;
+}
+.download-btn i{
+  margin-right: 10px;
+}
+.countdown{
+  font-size: 1.3em;
+  font-weight: 700;
+}
+.countdown span{
+  font-size: 1.3em;
+  font-weight: 800;
+  color: #2e7cfa;
+}
+.pleaseWait-text{
+  font-size: 1.3em;
+  font-weight: 700;
+  display: none;
+}
+.manualDownload-text{
+  font-size: 1.3em;
+  font-weight: 600;
+  display: none;
+}
+.manualDownload-link{
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #2e7cfa;
+}

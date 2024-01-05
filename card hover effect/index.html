@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Card Hover Effect</title>
+	<!-- S-Tech04 -->
+</head>
+<body>
+	<div class="card">
+		<div class="card-img">
+			<img src="./img1.jpg" alt="">
+		</div>
+		<div class="card-contant">
+			<h2>Title</h2>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas harum recusandae illum commodi, dolor eaque nam dolorem atque repudiandae veniam officiis id deleniti eligendi pariatur fuga porro alias molestiae saepe tempore dignissimos dolores maxime exercitationem nobis nisi! Similique, commodi quod.</p>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card-img">
+			<img src="./img2.jpg" alt="">
+		</div>
+		<div class="card-contant">
+			<h2>Title</h2>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas harum recusandae illum commodi, dolor eaque nam dolorem atque repudiandae veniam officiis id deleniti eligendi pariatur fuga porro alias molestiae saepe tempore dignissimos dolores maxime exercitationem nobis nisi! Similique, commodi quod.</p>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card-img">
+			<img src="./img3.jpg" alt="">
+		</div>
+		<div class="card-contant">
+			<h2>Title</h2>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas harum recusandae illum commodi, dolor eaque nam dolorem atque repudiandae veniam officiis id deleniti eligendi pariatur fuga porro alias molestiae saepe tempore dignissimos dolores maxime exercitationem nobis nisi! Similique, commodi quod.</p>
+		</div>
+	</div>
+
+	<script>
+		const cards = document.querySelectorAll('.card')
+		cards.forEach(element => {
+			element.onmousemove = (e)=>{
+				let x = e.pageX - element.offsetLeft;
+				let y = e.pageY - element.offsetTop;
+				element.style.setProperty('--x', x + "px")
+				element.style.setProperty('--y', y + "px")
+			}
+		});
+	</script>
+</body>
+</html>

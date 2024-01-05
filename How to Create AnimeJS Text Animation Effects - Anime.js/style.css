@@ -1,0 +1,30 @@
+*
+{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: sans-serif;
+}
+section
+{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   width: 100%;
+   overflow: hidden;
+   background: #0e1623;
+}
+section .text
+{
+   color: #4db2ec;
+   font-size: 5em;
+   position: relative;
+   text-align: center;
+   -webkit-box-reflect: below -0.45em linear-gradient(transparent, #0004);
+}
+section .text span
+{
+   position: relative;
+   display: inline-block;
+}

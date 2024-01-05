@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;900&display=swap');
+*
+{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+}
+body
+{
+   min-height: 100vh;
+   width: 100%;
+   background: #fdfcfc;
+}
+::-webkit-scrollbar
+{
+   width: 10px;
+   background: #d3defa;
+}
+::-webkit-scrollbar-thumb
+{
+   height: 80px;
+   background: #265df2;
+   background-clip: content-box;
+   border-radius: 12px;
+   transition: background 0.4s;
+}
+::-webkit-scrollbar-thumb:hover
+{
+   background: #0e4bf1;
+}
+.text-boxes
+{
+   height: 100%;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   padding: 0 30px;
+   margin-bottom: 50px;
+}
+.text-boxes .text-box
+{
+   height: 380px;
+   max-width: 660px;
+   width: 100%;
+   margin: 55px 0;
+}
+.text-boxes .text-box .topic
+{
+   font-size: 18px;
+   font-weight: 600;
+   color: #265df2;
+   margin: 4px;
+   width: 100%;
+}
+.text-boxes .text-box textarea
+{
+   display: block;
+   height: 100%;
+   width: 100%;
+   padding: 30px;
+   font-size: 15px;
+   font-weight: 400;
+   outline: none;
+   border: 1px solid #265df2;
+   border-radius: 8px;
+   background: #e7edfe;
+   overflow-x: scroll;
+   overflow-wrap: inherit;
+}
+.text-boxes .text-box textarea::-webkit-scrollbar
+{
+   display: none;
+}
+.text-boxes .text-box button
+{
+   display: block;
+   height: 45px;
+   width: 155px;
+   background: #265df2;
+   margin: 8px 0px;
+   color: #fff;
+   font-size: 17px;
+   font-weight: 400;
+   outline: none;
+   border: none;
+   border-radius: 3px;
+   cursor: pointer;
+   transition: all 0.5s;
+}
+.text-boxes .text-box button:hover
+{
+   background: #0e4bf1;
+}
+@media(max-width: 400px)
+{
+   .text-boxes .text-box button
+   {
+      width: 100%;
+   }
+}
